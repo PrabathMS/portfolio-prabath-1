@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Prabath</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/193e6d424f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-------------------- Home -------------------->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p> Freelancer </p>
+                <h1> Hi! I'm <span> Prabath </span> <br> Madushanka From Sri Lanka </h1>
+            </div>     
+        </div>
+    </div>
+
+<!-------------------- Portfolio (My Work) section -------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My <span>Work</span></h1>
+        <div class="work-list">
+
+            <div class="work">
+                <img src="images/User1.jpg" alt="Work1">
+                <div class="layer">
+                    <h3>Real Estate Promo Videos</h3>
+                    <p>I'll create stunning real estate videos that highlight properties and engage potential buyers, boosting visibility and sales.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            
+            <div class="work">
+                <img src="images/User2.jpg" alt="Work2">
+                <div class="layer">
+                    <h3>Podcasts</h3>
+                    <p>Polish your podcast with professional editing to ensure crisp audio, smooth transitions, and an engaging listening experience.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            
+            <div class="work">
+                <img src="images/User3.jpg" alt="Work3">
+                <div class="layer">
+                    <h3>Social Media Posts</h3>
+                    <p>Design eye-catching social media posts that reflect your brand and drive engagement with your audience.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+
+<!-------------------- About me section tab changing script -------------------->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<!-------------------- Mobile screen menu show/hide script -------------------->
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>
